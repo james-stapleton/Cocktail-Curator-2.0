@@ -12,8 +12,7 @@
     "sequelize": "^6.23.1"
   },
   "scripts": {
-    "start": "node server.js",
-    "seed": "seed"
+    "start": "node server.js"
   },
   "name": "cocktail-curator-2.0",
   "description": "",
