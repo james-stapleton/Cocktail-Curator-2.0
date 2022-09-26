@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class User extends Model {} 
+class Cocktails extends Model {} 
     User.init (
     {
       id: {
@@ -14,15 +14,16 @@ class User extends Model {}
         type: DataTypes.STRING,
         allowNull: false,
       },
-      email: {
+      ingredients: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            isEmail: true
-        }
+        allowNull: false
       },
-      is21: {
-        type: DataTypes.BOOLEAN,
+      instructions: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      image: {
+        type: DataTypes.STRING,
         allowNull: false
       }
     },
@@ -30,8 +31,8 @@ class User extends Model {}
       sequelize,
       freezeTableName: true,
       underscored: true,
-      modelName: 'users',
+      modelName: 'cocktails',
     },
   );
 
-module.exports = User;
+module.exports = Cocktails;
