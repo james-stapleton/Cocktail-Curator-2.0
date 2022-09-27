@@ -17,7 +17,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "seed": "node ./seeds/seed.js"
+    "seed": "node ./seeds/seed.js",
+    "dev": "nodemon app.js"
   },
   "name": "cocktail-curator-2.0",
   "description": "",
