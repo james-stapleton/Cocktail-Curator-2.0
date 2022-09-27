@@ -36,6 +36,13 @@ router.post('/', async (req, res) => {
     }
 }); 
 
-
+router.put('/:id', async (req,res) => {
+    try {
+        const cocktailData = await Cocktails.update(req.body, {where: {id: req.params.id}});
+        res.status(200).json(cocktailData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 module.exports = router;
