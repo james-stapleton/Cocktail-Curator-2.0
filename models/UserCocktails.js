@@ -1,20 +1,21 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const Cocktails = require('./Cocktails');
-const User = require('./Users');
+const Users = require('./Users');
 
 class UserCocktails extends Model {} 
     UserCocktails.init (
         {
-        userid: {
+        user_id: {
             type: DataTypes.INTEGER,
+            primaryKey: true,
             allowNull: false,
             references: {
-                model: User,
+                model: Users,
                 key: "id"
             }
         },
-        cocktailid: {
+        cocktail_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
@@ -24,6 +25,7 @@ class UserCocktails extends Model {}
         }
     },
     {
+        timestamps: false,
         sequelize,
         freezeTableName: true,
         underscored: true,

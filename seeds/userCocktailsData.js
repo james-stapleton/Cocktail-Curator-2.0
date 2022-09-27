@@ -2,20 +2,20 @@ const { UserCocktails, Cocktails } = require('../models');
 
 const userCocktailsData = [
     {
-        userid: 1,
-        cocktailid: 1
+        user_id: 1,
+        cocktail_id: 1
     },
     {
-        userid: 1,
-        cocktailid: 2
+        user_id: 1,
+        cocktail_id: 2
     },
     {
-        userid: 2,
-        cocktailid: 1
+        user_id: 2,
+        cocktail_id: 1
     },
     {
-        userid: 3,
-        cocktailid: 2
+        user_id: 3,
+        cocktail_id: 2
     },
 ];
 
