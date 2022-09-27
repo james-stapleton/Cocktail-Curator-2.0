@@ -6,29 +6,28 @@ const Users = require('./Users');
 class UserCocktails extends Model {} 
     UserCocktails.init (
         {
-        user_id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            allowNull: false,
-            references: {
-                model: Users,
-                key: "id"
-            }
-        },
-        cocktail_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: Cocktails,
-                key: "id"
-            }
-        }
+        // user_id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     references: {
+        //         model: Users,
+        //         key: "id"
+        //     }
+        // },
+        // cocktail_id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     references: {
+        //         model: Cocktails,
+        //         key: "id"
+        //     }
+        // }
     },
     {
         timestamps: false,
+        underscored: true,
         sequelize,
         freezeTableName: true,
-        underscored: true,
         modelName: 'user_cocktails',
       },
     );
