@@ -34,7 +34,12 @@ router.post('/', async (req,res) => {
 
 //User update method
 router.put('/:id', async (req,res) => {
-    
-})
+    try {
+    const updateData = await Users.update(req.body, {where: {id: req.params.id} }); 
+    // res.send(200).json(updateData);
+    } catch (err) {
+        console.log(err);
+    }
+});
 
 module.exports = router;
