@@ -7,29 +7,21 @@
 <meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="../../public/css/styles.css">
+<link rel="stylesheet" href="./public/css/styles.css">
+<title>Cocktail Curator</title>
 </head>
-
 <body>
 
-  <header class="display-flex justify-space-between align-center p-2">
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
-    {{/if}}
-  </header>
-  
-  <main class="container container-fluid mt-5">
-    {{{ body }}}
-  </main>
-  <footer>
-      
-  </footer>
+    <nav class="navbar">
+        <form class="form-inline">
+          <button class="btn btn-outline-success" type="button">Most Viewed Cocktails</button>
+          <button class="btn btn-outline-success" type="button">Cocktail Rankings</button>
+          <h1 class="text-white">Cocktail Curator</h1>
+          <button class="btn btn-outline-success" type="button">Login</button>
+          <button class="btn btn-outline-success" type="button">Logout</button>
+        </form>
+      </nav>
 
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
