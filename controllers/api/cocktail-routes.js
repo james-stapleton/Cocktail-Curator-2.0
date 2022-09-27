@@ -36,6 +36,7 @@ router.post('/', async (req, res) => {
     }
 }); 
 
+//cocktail update route
 router.put('/:id', async (req,res) => {
     try {
         const cocktailData = await Cocktails.update(req.body, {where: {id: req.params.id}});
@@ -45,6 +46,7 @@ router.put('/:id', async (req,res) => {
     }
 });
 
+//cocktail delete route
 router.delete('/:id', async (req,res) => {
     try {
         const cocktailData = await Cocktails.destroy({where: {id: req.params.id}});
