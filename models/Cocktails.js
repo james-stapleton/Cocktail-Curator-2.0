@@ -25,6 +25,14 @@ class Cocktails extends Model {}
       image: {
         type: DataTypes.STRING,
         allowNull: false
+      },
+      views: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0
+      },
+      rating: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0
       }
     },
     {
