@@ -45,4 +45,13 @@ router.put('/:id', async (req,res) => {
     }
 });
 
+router.delete('/:id', async (req,res) => {
+    try {
+        const cocktailData = await Cocktails.destroy({where: {id: req.params.id}});
+        res.status(200).json(cocktailData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
