@@ -2,6 +2,7 @@ const sequelize = require('../config/connection');
 const seedCocktails = require('./cockTailData');
 const seedUsers = require('./userData');
 const seedUserCocktails = require('./userCocktailsData');
+const seedRatings = require('./ratingsDating');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
@@ -11,6 +12,8 @@ const seedAll = async () => {
   await seedUsers();
 
   await seedUserCocktails();
+
+  await seedRatings();
 
   process.exit(0);
 };
