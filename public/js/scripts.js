@@ -1,4 +1,6 @@
 var drinkList = document.querySelector("#drinks");
+var savedDrinksButton = document.querySelector('#saved-drinks-btn');
+var savedFormEl = document.querySelector('#saved-drinks-form');
 
 fetch("http://localhost:3001/api/cocktails")
   .then(function (response) {
@@ -24,8 +26,28 @@ fetch("http://localhost:3001/api/cocktails")
     }
   });
 
+savedFormEl.addEventListener("submit", handleSavedFormSubmit);
+
+
+  function handleSavedFormSubmit(e) {
+    e.preventDefault();
+    var savedInputVal = document.querySelector("#saved-input").value;
+    console.log(savedInputVal);
+  
+    if (!savedInputVal) {
+      console.log("Invalid Input!");
+      return;
+    }
+    getSavedDrinks(savedInputVal);
+  }
+
+//   savedDrinksButton.addEventListener("click", (userID) => {
+
+//   });
+
   function getSavedDrinks(userID) {
-    fetch(`http://localhost:3001/api/users${userID}`)
+    console.log(userID);
+    fetch(`http://localhost:3001/api/users/${userID}`)
     .then((response) => {
        return response.json();
     })
