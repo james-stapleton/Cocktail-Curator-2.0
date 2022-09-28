@@ -1,5 +1,19 @@
 const stars = document.querySelectorAll(".stars a");
 const starWrapper = document.querySelector(".stars");
+const form = document.querySelector(".drink-form");
+
+function handleFormSubmit(event) {
+    event.preventDefault();
+    var userId = document.querySelector("#userInput").value;
+    var cocktailId = document.querySelector("#drinkInput").value;
+    console.log(`user: ${userId} cocktail: ${cocktailId}`);
+
+
+    postRating(rating);
+
+}
+
+form.addEventListener("submit", handleFormSubmit);
 
 stars.forEach((star, i) => {
     star.addEventListener("click", () => {
@@ -11,15 +25,14 @@ stars.forEach((star, i) => {
         })
         rating = i + 1;
         console.log(`Star ${rating} clicked`);
-        postRating(rating);
     })
 });
 
-function postRating(rating) {
-    console.log(rating);
+function postRating(userId, cocktailId, rating) {
+    console.log(userId, cocktailId, rating);
     const newRating = {
-        "userId": 1,
-        "cocktailId": 12,
+        "userId": userId,
+        "cocktailId": cocktailId,
         "rating": rating
     }
     const upload = JSON.stringify(newRating);
