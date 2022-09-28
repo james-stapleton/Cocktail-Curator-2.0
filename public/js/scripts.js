@@ -16,7 +16,7 @@ fetch("http://localhost:3001/api/cocktails")
       const drinkViews = response[i].views;
       const drinkRating = response[i].rating;
       var drinkEl = document.createElement("li");
-      const drinkString = `${drinkName} <br> ${drinkIngredients} <br>Views: ${drinkViews} <br> Rating: ${drinkRating}`;
+      const drinkString = `${drinkName} <br> ${drinkIngredients} <br>${drinkInstructions} <br>Views: ${drinkViews} <br> Rating: ${drinkRating}`;
 
       drinkEl.textContent = drinkString;
       drinkEl.innerHTML = drinkString;
@@ -26,8 +26,8 @@ fetch("http://localhost:3001/api/cocktails")
     }
   });
 
+  // Read the value of the input box in the form, then call the getSavedDrinks function with the provided user-id
 savedFormEl.addEventListener("submit", handleSavedFormSubmit);
-
 
   function handleSavedFormSubmit(e) {
     e.preventDefault();
@@ -35,16 +35,13 @@ savedFormEl.addEventListener("submit", handleSavedFormSubmit);
     console.log(savedInputVal);
   
     if (!savedInputVal) {
-      console.log("Invalid Input!");
+      console.log("Please enter a valid user ID");
       return;
     }
     getSavedDrinks(savedInputVal);
   }
 
-//   savedDrinksButton.addEventListener("click", (userID) => {
-
-//   });
-
+  // Grab user ID from the form, append it to the api url and make a fetch request
   function getSavedDrinks(userID) {
     console.log(userID);
     fetch(`http://localhost:3001/api/users/${userID}`)
@@ -55,5 +52,5 @@ savedFormEl.addEventListener("submit", handleSavedFormSubmit);
         console.log(`Fetch successful for user ${userID}!`)
         console.log(data);
     });
-  }
+  };
   
