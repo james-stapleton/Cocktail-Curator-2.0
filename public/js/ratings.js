@@ -9,10 +9,7 @@ function handleFormSubmit(event) {
     var cocktailId = document.querySelector("#drinkInput").value;
     var starIndex = getStar();
     console.log(`user: ${userId} cocktail: ${cocktailId} rating: ${starIndex}`);
-
-
     postRating(userId, cocktailId, starIndex);
-
 }
 
 form.addEventListener("submit", handleFormSubmit);
