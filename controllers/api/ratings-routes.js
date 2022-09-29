@@ -4,7 +4,7 @@ const { Ratings, Users, Cocktails } = require('../../models');
 
 router.get('/', async (req,res) => {
     try {
-        const [results, metadata] = await sequelize.query("SELECT cocktail_id, AVG(rating) as 'Rating' from ratings GROUP BY cocktail_id ORDER BY AVG(rating) DESC;");
+        const [results, metadata] = await sequelize.query("SELECT cocktail_id, cocktails.name, AVG(ratings.rating) AS 'Rating' FROM ratings JOIN cocktails ON ratings.cocktail_id = cocktails.id GROUP BY cocktail_id ORDER BY AVG(rating) DESC;");
         res.status(200).json(results);
     } catch (err) {
         res.status(500).json(err);
