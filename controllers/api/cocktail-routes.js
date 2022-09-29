@@ -26,6 +26,15 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+router.get('/name/:name', async (req,res) => {
+    try {
+        const cocktailData = await Cocktails.findOne( {where: {name: req.params.name}});
+        res.status(200).json(cocktailData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
 //cocktail create route
 router.post('/', async (req, res) => {
     try {

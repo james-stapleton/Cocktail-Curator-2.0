@@ -20,7 +20,7 @@ const cocktailData = [
     image: 'manhattan.jpg'
   },
   {
-    name: 'Dry Martini',
+    name: 'Dry-Martini',
     ingredients: '2 1/2 ounces gin, 1/2 ounce dry vermouth, 1 dash orange bitters, Garnish: lemon twist',
     instructions: 'Add the gin, dry vermouth and orange bitters into a mixing glass with ice and stir until very cold. Strain into a chilled cocktail glass. Garnish with a lemon twist.',
     image: 'dry martini.jpg'
@@ -32,13 +32,13 @@ const cocktailData = [
     image: 'daiquiri.jpg'
   },
   {
-    name: 'Whiskey Sour',
+    name: 'Whiskey-Sour',
     ingredients: '2 ounces bourbon, 3/4 ounce lemon juice, freshly squeezed, 1/2 ounce simple syrup, 1/2 ounce egg white (optional), Garnish: Angostura bitters',
     instructions: 'Add bourbon, lemon juice, simple syrup and egg white, if using, to a shaker and dry-shake for 30 seconds without ice. Add ice and shake again until well-chilled. Strain into a rocks glass or a coupe. Garnish with 3 or 4 drops of Angostura bitters.',
     image: 'whiskey sour.jpg'
   },
   {
-    name: 'Tom Collins',
+    name: 'Tom-Collins',
     ingredients: '2 ounces London dry gin, 1 ounce lemon juice freshly squeezed, 1/2 ounce simple syrup, Club soda to top, Garnish: lemon wheel, Garnish: maraschino cherry',
     instructions: 'Add the gin, lemon juice and simple syrup to a Collins glass. Fill with ice, top with club soda and stir. Garnish with a lemon wheel and maraschino cherry (optional).',
     image: 'tom collins.jpg'
@@ -56,7 +56,7 @@ const cocktailData = [
     image: 'paloma.jpg'
   },
   {
-    name: 'Moscow Mule',
+    name: 'Moscow-Mule',
     ingredients: '2 ounces vodka, 1/2 ounce lime juice freshly squeezed, 3 ounces ginger beer chilled, Garnish: lime wheel',
     instructions: 'Fill a Moscow Mule mug (or highball glass) with ice, then add the vodka and lime juice. Top with the ginger beer. Garnish with a lime wheel.',
     image: 'moscow mule.jpg'
@@ -74,43 +74,43 @@ const cocktailData = [
     image: 'martinez.jpg'
   },
   {
-    name: "Pimm's Cup",
+    name: "Pimms-Cup",
     ingredients: '2 ounces Pimm’s No. 1, 1/2 ounce lemon juice freshly squeezed, Ginger ale to top, Garnish: cucumber slice, Garnish: mint sprig, Garnish: strawberry, Garnish: lemon wheel (optional), Garnish: orange wheel (optional)',
     instructions: 'Add Pimm’s No. 1 and lemon juice into a highball glass over ice, then top with ginger ale and stir briefly to combine. Garnish with a cucumber slice, mint sprig, skewered strawberry and optional lemon and orange wheels.',
     image: 'pimms cup.jpg'
   },
   {
-    name: "Pisco Soup",
+    name: "Pisco-Sour",
     ingredients: '2 ounces pisco, 1 ounce lime juice freshly squeezed, 1/2 ounce simple syrup, 1 egg white, Garnish: Angostura bitters',
     instructions: 'Add pisco, lime juice, simple syrup and egg white into a shaker and dry-shake (without ice) vigorously. Add ice and shake again until well-chilled. Strain into a chilled Nick & Nora glass. (Alternatively, you can strain it into a rocks glass over fresh ice.) Garnish with 3 to 5 drops of Angostura bitters. Using a straw, toothpick or similar implement, swirl the bitters into a simple design, if desired.',
     image: 'pisco sour.jpg'
   },
   {
-    name: "French 75",
+    name: "French-75",
     ingredients: '1 ounce gin, 1/2 ounce lemon juice freshly squeezed, 1/2 ounce simple syrup, 3 ounces Champagne (or other sparkling wine), Garnish: lemon twist',
     instructions: 'Add the gin, lemon juice and simple syrup to a shaker with ice and shake until well-chilled. Strain into a Champagne flute. Top with the Champagne. Garnish with a lemon twist.',
     image: 'french 75.jpg'
   },
   {
-    name: "Mint Julep",
+    name: "Mint-Julep",
     ingredients: '8 mint leaves, 1/4 ounce simple syrup, 2 ounces bourbon, Garnish: mint sprig, Garnish: Angostura bitters (optional)',
     instructions: 'In a Julep cup or rocks glass, lightly muddle the mint leaves in the simple syrup. Add the bourbon then pack the glass tightly with crushed ice. Stir until the cup is frosted on the outside. Top with more crushed ice to form an ice dome, and garnish with a mint sprig and a few drops of bitters (optional).',
     image: 'mint julep.jpg'
   },
   {
-    name: "Last Word",
+    name: "Last-Word",
     ingredients: '3/4 ounce gin, 3/4 ounce green Chartreuse, 3/4 ounce maraschino liqueur, 3/4 ounce lime juice freshly squeezed, Garnish: brandied cherry (optional)',
     instructions: 'Add the gin, green Chartreuse, maraschino liqueur and lime juice into a shaker with ice and shake until well-chilled. Strain into a chilled coupe glass. Garnish with a brandied cherry (optional).',
     image: 'last word.jpg'
   },
   {
-    name: "Irish Coffee",
+    name: "Irish-Coffee",
     ingredients: '1 1/2 ounces Irish whiskey, 2 teaspoons brown sugar, Hot brewed coffee to top, Garnish: whipped cream',
     instructions: 'Fill an Irish Coffee mug with hot water, let sit for 2 minutes, then discard the water. Add the whiskey and sugar to the heated glass, fill with the coffee, and stir. Top with an inch of unsweetened lightly whipped cream.',
     image: 'irish coffee.jpg'
   },
   {
-    name: "Corpse Reviver No. 2",
+    name: "Corpse-Reviver-No.2",
     ingredients: 'Absinthe to rinse, 3/4 ounce London dry gin, 3/4 ounce Lillet blanc, 3/4 ounce orange liqueur, 3/4 ounce lemon juice freshly squeezed',
     instructions: 'Rinse the inside of a chilled coupe or cocktail glass with absinthe, discard the excess and set the glass aside. Add the gin, Lillet blanc, orange liqueur and lemon juice into a shaker with ice and shake until well-chilled. Strain into the prepared glass.',
     image: 'corpse reviver no. 2.jpg'
@@ -122,13 +122,13 @@ const cocktailData = [
     image: 'mojito.jpg'
   },
   {
-    name: "Gin Fizz",
+    name: "Gin-Fizz",
     ingredients: '2 ounces gin, 1 ounce lemon juice freshly squeezed, 3/4 ounce simple syrup, 1 egg white (about 1/2 ounce), Club soda to top (about 1 ounce)',
     instructions: 'Add the gin, lemon juice, simple syrup and egg white to a shaker and vigorously dry-shake (without ice) for about 15 seconds. Add 3 or 4 ice cubes and shake vigorously until well-chilled. Double-strain into a chilled Collins glass and top with club soda.',
     image: 'gin fizz.jpg'
   },
   {
-    name: "Vodka Gimlet",
+    name: "Vodka-Gimlet",
     ingredients: '2 ounces vodka, 3/4 ounce lime juice freshly squeezed, 1/2 ounce simple syrup, Garnish: lime wheel',
     instructions: 'Add the vodka, lime juice and simple syrup into a shaker with ice and shake until well-chilled. Strain into a chilled cocktail glass. Garnish with a lime wheel.',
     image: 'vodka gimlet.jpg'
