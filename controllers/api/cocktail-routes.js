@@ -1,5 +1,11 @@
+
+
+
 const router = require('express').Router();
+const sequelize = require('../../config/connection');
 const {Cocktails, Users, UserCocktails} = require('../../models');
+const Sequelize = require("sequelize");
+const Op = Sequelize.Op;
 
 
 //cocktail get routes
@@ -33,7 +39,24 @@ router.get('/name/:name', async (req,res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
+
+router.get('/ing/:ing', async (req,res) => {
+    console.log(req.params.ing);
+    try {
+        const cocktailData = await Cocktails.findAll( {
+            where: {
+                ingredients: {
+                    [Op.like]: `%${req.params.ing}%`
+                }
+            }
+        })
+        res.status(200).json(cocktailData);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
 
 //cocktail create route
 router.post('/', async (req, res) => {
