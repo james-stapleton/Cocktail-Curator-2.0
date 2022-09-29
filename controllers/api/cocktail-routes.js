@@ -3,14 +3,14 @@ const {Cocktails, Users, UserCocktails} = require('../../models');
 
 
 //cocktail get routes
-router.get('/', async (req,res) => {
-    try {
-        const cocktailData = await Cocktails.findAll();
-        res.status(200).json(cocktailData);
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
+// router.get('/', async (req,res) => {
+//     try {
+//         const cocktailData = await Cocktails.findAll();
+//         res.status(200).json(cocktailData);
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
 
 router.get('/:id', async (req, res) => {
     try {
@@ -19,6 +19,19 @@ router.get('/:id', async (req, res) => {
             res.status(404).json({message: "No cocktail with that id"});
         }
         else {
+        res.status(200).json(cocktailData);
+    }
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get("/", async function(req, res) {
+    try {
+    const cocktailData = await Cocktails.findAll();
+    if (cocktailData) {
+        res.render("userDrinks", {cocktailData}, {title: "Saved Drinks"});
+    } else {
         res.status(200).json(cocktailData);
     }
     } catch (err) {
