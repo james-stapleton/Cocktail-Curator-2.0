@@ -26,19 +26,6 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-router.get("/", async function(req, res) {
-    try {
-    const cocktailData = await Cocktails.findAll();
-    if (cocktailData) {
-        res.render("userDrinks", {cocktailData}, {title: "Saved Drinks"});
-    } else {
-        res.status(200).json(cocktailData);
-    }
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
-
 //cocktail create route
 router.post('/', async (req, res) => {
     try {
