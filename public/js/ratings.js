@@ -113,8 +113,7 @@ function getCurrentWeather(city) {
     var drinksArray = []; //empty array that will be filled with curated drink suggestions
     var drinkIndex; //index variable that will be randomly assigned to select a drink from the array
     var drink = ""; //empty string that will be given the name of a drink from the array
-    var drinkURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="; //URL for the fetch that will be appended with drink string
-    // conditional code for temperature ranges
+    var drinkURL = `http://localhost:3001/api/cocktails/name/`;
     tempText.innerHTML = "";
     console.log("Current drink is: " + currentDrink);
   
@@ -140,7 +139,7 @@ function getCurrentWeather(city) {
       //append the selected drink name to the url and call the tempSearch function which contains the Fetch code
       drinkURL += drink;
       currentDrink = drink;
-    //   tempSearch(drinkURL);
+      displayDrink(drinkURL);
       console.log("It's a scorcher today! Try a refreshing " + drink);
       var weatherDrink = document.createElement("h2");
       weatherDrink.textContent = "It's a scorcher today! Try a refreshing: ";
@@ -163,7 +162,7 @@ function getCurrentWeather(city) {
       }
       drinkURL += drink;
       currentDrink = drink;
-    //   tempSearch(drinkURL);
+      displayDrink(drinkURL);
       console.log("Nice Day! Relax with an easy-sipping " + drink);
       var weatherDrink = document.createElement("h2");
       weatherDrink.textContent = "Nice Day! Relax with an easy-sipping: ";
@@ -185,7 +184,7 @@ function getCurrentWeather(city) {
       }
       drinkURL += drink;
       currentDrink = drink;
-    //   tempSearch(drinkURL);
+      displayDrink(drinkURL);
       console.log(
         "It's a bit chilly! You need a little liquid warmth from a stiff " + drink
       );
@@ -209,13 +208,29 @@ function getCurrentWeather(city) {
       }
       drinkURL += drink;
       currentDrink = drink;
-    //   tempSearch(drinkURL);
+      displayDrink(drinkURL);
       console.log("Brr. Warm up with a " + drink);
       var weatherDrink = document.createElement("h2");
       weatherDrink.textContent = "Brr. Warm up with a: ";
       tempText.appendChild(weatherDrink);
     }
     return currentDrink;
+  }
+
+  function displayDrink(drinkUrl) {
+    console.log(drinkUrl);
+    fetch(drinkUrl)
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+        console.log(data);
+        const template = Handlebars.compile(document.querySelector("#template").innerHTML);
+    const filled = template(data);
+    console.log(filled);
+    document.querySelector('#output').innerHTML = filled;
+
+    })
   }
 
 //! -----------------------------------------------------------------------------------------------------------

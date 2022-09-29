@@ -9,6 +9,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="./css/styles.css">
 <link rel="stylesheet" href="./css/rating.css">
+
+<!-- !  ---------------------------------------------------->
+
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+<!-- !  ---------------------------------------------------->
+
 <title>Cocktail Ratings</title>
 </head>
 <body>
@@ -41,6 +48,8 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
+<!-- !---------------------------------------------------------- -->
+
 <div>
   <form id="search-form">
       <label id="search-label" for="search-input">Search for a City:</label>
@@ -53,6 +62,20 @@
 <div id="tempText"></div>
 <div id="city-drink-name" class="grid-x grid-margin-x"></div>
 <div id="recipe" class="grid-x grid-margin-x"></div>
+
+
+<script type="x-handlebars-template" id="template">
+  {{data}}
+  
+  <h1>{{this.name}}</h1>
+  <p>{{this.ingredients}}</p>
+  <p>{{this.instructions}}</p>
+
+</script>
+
+<div id="output">
+
+</div>
 
 <script src="./js/ratings.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
