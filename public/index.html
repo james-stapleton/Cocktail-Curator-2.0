@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="./css/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 <script src="../seeds/cocktailData.js"></script>
 <title>Cocktail Curator</title>
@@ -35,6 +37,16 @@
       <button class="button" id="saved-drinks-btn">Get saved drinks by user ID</button>
   </form>
 </div> -->
+
+<script id="template" type="text/x-handlebars-template">
+  {{#each cocktailData}}
+  <tr>
+    <td>{{cocktailData.name}}</td>
+    <td>{{cocktailData.ingredients}}</td>
+    <td>{{cocktailData.instructions}}</td>
+  </tr>
+  {{/each}}  
+</script>
 
 
 <!-- card template -->
